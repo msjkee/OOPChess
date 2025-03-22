@@ -4,6 +4,7 @@ public class ChessGame {
     }
 
     public static void startGame() {
-        System.out.println("\n" + "Game is started!");
+        ChessBoard chessBoard = new ChessBoard();
+        chessBoard.printBoard();
     }
 }
