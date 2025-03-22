@@ -80,4 +80,32 @@ public class ChessBoard {
         }
         System.out.println("  A B C D E F G H" + "\n");
     }
+
+    public boolean makeMove(int start_x, int start_y, int end_x, int end_y) {
+        Piece movingPiece = board[start_x][start_y];
+
+        // 1. Check if there is a figure at the start
+        if (movingPiece == null) {
+            System.out.println("❌ No piece on the selected cell");
+            return false;
+        }
+
+        // 2. Check: validity of the move according to the figure rules
+        if (!movingPiece.isMoveValid(start_x, start_y, end_x, end_y, board)) {
+            System.out.println("❌ Unacceptable move for this figure");
+            return false;
+        }
+
+        // 3. Taken
+        Piece target = board[end_x][end_y];
+        if (target != null) {
+            System.out.println("💥 " + movingPiece.getClass().getSimpleName() + " beats " + target.getClass().getSimpleName());
+        }
+
+        // 4. Moving
+        board[end_x][end_y] = movingPiece;
+        board[start_x][start_y] = null;
+
+        return true;
+    }
 }
