@@ -28,5 +28,5 @@ public abstract class Piece {
     public abstract String getWhitePieceSymbol();
     public abstract String getBlackPieceSymbol();
 
-    public abstract boolean isMoveValid(int start_x, int start_y, int end_x, int end_y);
+    public abstract boolean isMoveValid(int start_x, int start_y, int end_x, int end_y, Piece chessBoard[][]);
 }
