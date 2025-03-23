@@ -56,6 +56,10 @@ public class ChessBoard {
         board[7][6] = new Knight("White");
     }
 
+    public Piece getPieceAt(int row, int col) {
+        return board[row][col];
+    }
+
     public void printBoard() {
         System.out.println("\n" + "  A B C D E F G H");
 
