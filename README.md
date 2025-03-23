@@ -22,7 +22,7 @@ The focus is on clean architecture, inheritance, and encapsulated logic per piec
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repo-name.git
+   git clone https://github.com/msjkee/OOPChess.git
    ```
 
 2. Open the project in **IntelliJ IDEA** or any Java IDE
